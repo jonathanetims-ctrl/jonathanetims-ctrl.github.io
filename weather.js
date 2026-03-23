@@ -14,7 +14,15 @@ async function getWeatherData() {
         console.log("Data successfully retrieved:", data);
         weatherData = data.daily; 
         
-      function renderForecast(dailyData) {
+        renderForecast(weatherData); 
+
+    } catch (error) {
+        console.error("Error fetching the weather data:", error);
+    }
+}
+
+
+function renderForecast(dailyData) {
     const container = document.getElementById("forecast-container");
     container.innerHTML = ""; 
 
@@ -34,12 +42,8 @@ async function getWeatherData() {
         container.appendChild(dayDiv);
     }
 }
-        renderForecast(weatherData); 
 
-    } catch (error) {
-        console.error("Error fetching the weather data:", error);
-    }
-}
+
 
 // Run the function
 getWeatherData();
