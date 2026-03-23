@@ -1,5 +1,5 @@
-  const latitude = 41.8781;  // 35.920
-const longitude = -87.6298; // -86.882
+  const latitude = 41.8781; 35.920
+const longitude = -87.6298; -86.882
 
 // The API URL asking for 7 days of daily high/low temperatures in Fahrenheit
 const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=auto`;
